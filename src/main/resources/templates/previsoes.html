@@ -84,6 +84,7 @@
                             <th>Temp. Max.</th>
                             <th>Umidade</th>
                             <th>Descrição</th>
+                            <th>Cidade</th>
                             <th>Latitude</th>
                             <th>Longitude</th>
                             <th>data/hora</th>
@@ -96,6 +97,7 @@
                             <td th:text="${previsao.tempMax + '°C'}"></td>
                             <td th:text="${previsao.umidade + '%'}"></td>
                             <td th:text="${previsao.descricao}"></td>
+                            <td th:text="${previsao.cidade}"></td>
                             <td th:text="${previsao.latitude}"></td>
                             <td th:text="${previsao.longitude}"></td>
                             <td th:text="${previsao.hora}"></td>

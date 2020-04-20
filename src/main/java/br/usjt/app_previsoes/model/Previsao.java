@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -20,6 +21,9 @@ public class Previsao implements Serializable {
     @OneToOne(optional=false)
     @JoinColumn(name="dia_semana_id")
     private DiaSemana diaSemana;
+
+    @ManyToOne
+    private Cidade cidade;
 
     @Column(name="TEMPMIN")
     private Double tempMin;
@@ -41,6 +45,14 @@ public class Previsao implements Serializable {
 
     @Column(name="HORA")
     private String hora;
+
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
+    }
+
+    public Cidade getCidade() {
+        return cidade;
+    }
 
     public String getLatitude() {
         return latitude;
