@@ -1,7 +1,6 @@
 package br.usjt.app_previsoes.model;
 
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,72 +9,105 @@ import javax.persistence.Id;
 
 @Entity
 public class Previsao implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
-	
-	@Column(name="DIASEMANA")
-	private String diaSemana;
-	
-	@Column(name="TEMPMIN")
-	private Double tempMin;
-	
-	@Column(name="TEMPMAX")
-	private Double tempMax;
-	
-	@Column(name="UMIDADE")
-	private int umidade;
-	
-	@Column(name="DESCRICAO")
-	private String descricao;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
 
-	public Long getId() {
-		return id;
-	}
+    @Column(name="DIASEMANA")
+    private String diaSemana;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    @Column(name="TEMPMIN")
+    private Double tempMin;
 
-	public String getDiaSemana() {
-		return diaSemana;
-	}
+    @Column(name="TEMPMAX")
+    private Double tempMax;
 
-	public void setDiaSemana(String diaSemana) {
-		this.diaSemana = diaSemana;
-	}
+    @Column(name="UMIDADE")
+    private int umidade;
 
-	public Double getTempMin() {
-		return tempMin;
-	}
+    @Column(name="DESCRICAO")
+    private String descricao;
 
-	public void setTempMin(Double tempMin) {
-		this.tempMin = tempMin;
-	}
+    @Column(name="LATITUDE")
+    private String latitude;
 
-	public Double getTempMax() {
-		return tempMax;
-	}
+    @Column(name="LONGITUDE")
+    private String longitude;
 
-	public void setTempMax(Double tempMax) {
-		this.tempMax = tempMax;
-	}
+    @Column(name="HORA")
+    private String hora;
 
-	public int getUmidade() {
-		return umidade;
-	}
+    public String getLatitude() {
+        return latitude;
+    }
 
-	public void setUmidade(int umidade) {
-		this.umidade = umidade;
-	}
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
 
-	public String getDescricao() {
-		return descricao;
-	}
+    public String getLongitude() {
+        return longitude;
+    }
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDiaSemana() {
+        return diaSemana;
+    }
+
+    public void setDiaSemana(String diaSemana) {
+        this.diaSemana = diaSemana;
+    }
+
+    public Double getTempMin() {
+        return tempMin;
+    }
+
+    public void setTempMin(Double tempMin) {
+        this.tempMin = tempMin;
+    }
+
+    public Double getTempMax() {
+        return tempMax;
+    }
+
+    public void setTempMax(Double tempMax) {
+        this.tempMax = tempMax;
+    }
+
+    public int getUmidade() {
+        return umidade;
+    }
+
+    public void setUmidade(int umidade) {
+        this.umidade = umidade;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 }
