@@ -31,9 +31,4 @@ public class PrevisoesController {
         previsoesRepo.save(previsao);
         return "redirect:/previsoes";
     }
-
-    @RequestMapping("/")
-    public String index() {
-        return "redirect:/previsoes";
-    }
 }
